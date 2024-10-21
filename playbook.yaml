@@ -2,6 +2,7 @@
   - name: Play for Install Nginx on WebServers
     hosts: localhost
     gather_facts: yes
+    become: yes
     vars:
       custom_heading: "Welcome To App Testing by Mohit"
       todays_date: "{{ ansible_facts['date_time']['date'] }}"
